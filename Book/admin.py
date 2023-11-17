@@ -16,7 +16,7 @@ class BookAdmin(admin.ModelAdmin):
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('reviewer_name', 'rating', 'content')
     search_fields = ('reviewer_name', 'rating', 'content')
-    list_filter = ('rating', 'content')
+    list_filter = ('book', 'rating', 'content')
 
 
 admin.site.register(Author, AuthorAdmin)
